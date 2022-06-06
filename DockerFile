@@ -1,0 +1,9 @@
+FROM ubuntu
+
+FROM java:11
+
+EXPOSE 8080
+
+ADD target/selfservice.jar selfservice.jar
+
+ENTRYPOINT ["java", "jar", "selfservice.jar"]
